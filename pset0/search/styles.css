@@ -6,41 +6,67 @@
     align-items: center;
   }
 
-  /* colors for Google logo */
-.blue
-{
-    color: #537fbe;
-}
-.red
-{
-    color: #ea433b;
-}
-.yellow
-{
-    color: #f5b82e;
-}
-.green
-{
-    color: #2e944b;
-}
-
-#logo {
-  font-size: 100px;
-}
-
 /* horizontal line */
 .horizontal-separator {
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin-bottom: 35px;
+  margin-top: 25px;
 }
 
-/* title advanced search */
+/* text advanced search */
 #title {
+  margin-left: 45px;
+  margin-top: 30px;
   font-size: 20px;
   color: red;
+}
+#subtitle {
+  font-size: 17px;
+}
+#subsubtitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: gray;
+}
+#notes {
+  display: inline-block;
+  font-size: 10px;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+#description {
+  font-size: 13px;
+  margin-right: 40px;
 }
 
 /* input form */
 .form-rounded {
   border-radius: 1rem;
+  }
+
+/* define spacing for logo */
+.logo {
+  margin-bottom: 30px;
+}
+
+/* change color of navbar elements */
+nav .navbar-nav li a{
+  color: black !important;
+}
+
+/* table advanced search */
+.text-input-table {
+  margin: 15px 45px;
+}
+.text-input-table tr {
+  font-size: 10pt;
+}
+tr > td {
+  padding-bottom: 1em;
+}
+.form-field {
+  width: 600px;
+}
+@media only screen and (max-width: 768px) {
+  .searchbar-sm {
+    width: 190px;
   }

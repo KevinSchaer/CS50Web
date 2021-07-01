@@ -7,7 +7,7 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg">
             <div class="collapse navbar-collapse justify-content-end" id="navbar">
                 <ul class="navbar-nav justify-content-end">
                     <li class="nav-item">
@@ -20,43 +20,55 @@
             </div>
         </nav>
 
-        <main class="container my-4 h-100">
-            <div class="row h-100">
-                <form action="https://google.com/search" class="col-7" name="f">
+        <div class="form-group">
+            <p id="title">
+                Advanced Search
+            </p>
+        </div>
 
-                    <div class="form-group">
-                        <p id="title">
-                            Advanced Search
-                        </p>
-                    </div>
+        <hr class="horizontal-separator">
 
-                    <hr class="horizontal-separator">
+        <form action="https://google.com/search">
+			
+			<table class="text-input-table">
+				<tr>
+                    <td><div id="subtitle">Find pages with...</div></td>
+                    <td></td>
+                    <td><div id="subsubtitle">To do this in the search box.</div></td>
+                </tr>	
+				<tr>
+					<td><div id="description">all of these words:</div></td>
+					<td><input type="text" class="form-control form-field" id="field1" value=""  name="as_q"></td>
+                    <td><div id="notes">Type the important words: tri-colour rat terrier</div></td>
+				</tr>
+				<tr>
+					<td><div id="description">this exact word or phrase:</div></td>
+					<td><input type="text" class="form-control" id="field2" value=""  name="as_epq"></td>
+                    <td><div id="notes">Put exact words in quotes: "rat terrier"</div></td>
+				</tr>
+				<tr>
+					<td><div id="description">any of these words:</div></td>
+					<td><input type="text" class="form-control" id="field3" value=""  name="as_oq"></td>
+                    <td><div id="notes">Type OR between all the words you want: miniature OR standard</div></td>
+				</tr>
+				<tr>
+					<td><div id="description">none of these words:</div></td>
+					<td><input type="text" class="form-control" id="field4" value=""  name="as_eq"></td>
+                    <td><div id="notes">Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</div></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+                        <div class="form-group text-right">
+                            <input type="submit" value="Advanced Search" class="btn btn-primary">
+                        </div>
+                    </td>
+                    <td></td>
+				</tr>
+			 </table>
+			
+			
+		</form>
 
-                    <div class="form-group">
-                        <label for="field1">all these words:</label>
-                        <input type="text" class="form-control" id="field1" value=""  name="as_q">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="field2">this exact word or phrase: </label>
-                        <input type="text" class="form-control" id="field2" value=""  name="as_epq">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="field3">any of this words: </label>
-                        <input type="text" class="form-control" id="field3" value=""  name="as_oq">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="field4">none of these words: </label>
-                        <input type="text" class="form-control" id="field4" value=""  name="as_eq">
-                    </div>
-                    
-                    <div class="form-group text-right">
-                        <input type="submit" value="Advanced Search" class="btn btn-primary">
-                    </div>
-                </form>
-            </div>
-        </main>
     </body>
 </html>
