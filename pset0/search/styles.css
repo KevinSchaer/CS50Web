@@ -1,0 +1,46 @@
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;
+  
+    display: flex;
+    align-items: center;
+  }
+
+  /* colors for Google logo */
+.blue
+{
+    color: #537fbe;
+}
+.red
+{
+    color: #ea433b;
+}
+.yellow
+{
+    color: #f5b82e;
+}
+.green
+{
+    color: #2e944b;
+}
+
+#logo {
+  font-size: 100px;
+}
+
+/* horizontal line */
+.horizontal-separator {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+/* title advanced search */
+#title {
+  font-size: 20px;
+  color: red;
+}
+
+/* input form */
+.form-rounded {
+  border-radius: 1rem;
+  }
