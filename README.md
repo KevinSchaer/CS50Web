@@ -5,3 +5,4 @@ This repository is used to store my progress of the [CS50 Web Programming](https
 # Table of Contents
 
 * Problem Set 0: Search - [HTML, CSS, Bootstrap] - [pset0](https://cs50.harvard.edu/web/2020/projects/0/)
+* Problem Set 1: Wiki - [HTML, CSS, Python] - [pset1](https://cs50.harvard.edu/web/2020/projects/1/)
