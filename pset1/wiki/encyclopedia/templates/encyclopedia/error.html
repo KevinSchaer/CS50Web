@@ -1,0 +1,35 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Entry not found: {{ title }}
+{% endblock %}
+
+{% block body %}
+
+    {% if error == 'duplicate' %}
+        <div class="alert alert-danger" role="alert">
+            <p>Error:  Page '{{ title }}' already exists!</p>
+        </div>
+        <div>
+            <a href="{% url 'create' %}">Back to Create New Page</a>
+        </div>
+    {% endif %}
+
+    {% if error == 'empty' %}
+        <div class="alert alert-danger" role="alert">
+            <p>Error:  Title or Content of page is empty!</p>
+        </div>
+        <div>
+            <a href="{% url 'create' %}">Back to Create New Page</a>
+        </div>
+    {% endif %}
+
+    {% if error == '403' %}
+    <div class="alert alert-danger" role="alert">
+            <p>Error:  Page '{{ title }}' not found! Go to <a href="{% url 'create' %}">Create New Page</a>
+            to submit a new entry.
+            </p>
+    </div>
+    {% endif %}
+
+{% endblock %}

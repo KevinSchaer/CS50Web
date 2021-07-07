@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Wiki: {{ title }}
+{% endblock %}
+
+{% block body %}
+    {% if entry %}
+        <p>{{ entry |safe }}</p>
+
+        <a href="/wiki/{{ title }}/edit" value={{ title }}>Edit Page</a>
+        <a href="/wiki/{{ title }}/delete" value={{ title }}>Delete Page</a>
+
+    {% endif %}
+{% endblock %}
