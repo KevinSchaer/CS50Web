@@ -30,6 +30,7 @@ def entry(request, title):
     else:
         # show selected page
         entry = util.get_entry(title)
+        # if entry does not exists
         if not entry:
             return render(request, "encyclopedia/error.html", {
                 "error": "403",
@@ -55,21 +56,29 @@ def create(request):
         if request.method == "POST":
             title = request.POST["title"]
             content = request.POST["content"]
-            if content and title:
-                if util.get_entry(title):
-                    return render(request, "encyclopedia/error.html", {
-                        "error": "duplicate",
-                        "title": title
-                    })
-                else:
-                    util.save_entry(title, content)
-                    return redirect(reverse('entry', args=[title]))
-            else:
+            # check if content or title is empty
+            if not content or not title:
                 return render(request, "encyclopedia/error.html", {
                         "error": "empty",
                         "title": title
                     })
-
+            # check if title already exists
+            elif util.get_entry(title):
+                    return render(request, "encyclopedia/error.html", {
+                        "error": "duplicate",
+                        "title": title
+                    })
+            # check if title contains space -> leads to problems with the conversion to html
+            elif " " in title:
+                return render(request, "encyclopedia/error.html", {
+                        "error": "space",
+                        "title": title
+                    })
+            # if everything is fine, save entry and redirect
+            else:
+                util.save_entry(title, content)
+                return redirect(reverse('entry', args=[title]))
+        # show the user the create entry form
         else:
             return render(request, "encyclopedia/create.html", {})
 
